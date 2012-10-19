@@ -32,27 +32,3 @@ get '/:id' do
   final = url ? url.real_url : Zomburl::SERVER_URL
   redirect to final
 end
-
-__END__
-@@layout
-doctype html
-html
-  head
-    meta charset="utf-8"
-    title Zomburl
-    link href='http://fonts.googleapis.com/css?family=Jolly+Lodger' rel='stylesheet' type='text/css'
-    link rel="stylesheet" href="stylesheets/application.css"
-  body
-     div style="margin-left: 35%; margin-top: 12%; width: 500px; text-align:center;"
-      img src="images/zombie.png"
-      h1 ZOMBURL
-      == yield
-@@index
-form action="/" method="POST"
-  label http://
-  input type="text" name="url"
-  br
-  br
-  input.button type="submit" value="Zomburl !"
-@@show
-== @url
