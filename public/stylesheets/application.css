@@ -5,20 +5,26 @@ html {
 }
 
 body {
-    margin: 0;
-}
-
-
-body {
   margin: 0;
   font-family: 'Jolly Lodger', cursive;
   background-color: #0f0f0f;
   color: #87be2f;
 }
 
+a {
+  text-decoration: none;
+  color: #87be2f
+}
+
 .center {
-  margin-left: 35%;
-  margin-top: 12%;
+  margin-left: 36.5%;
+  margin-top: 11%;
   width: 500px;
   text-align:center;
+}
+
+.footer {
+  margin-top: 14%;
+  width: 100%;
+  text-align: center;
 }
