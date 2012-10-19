@@ -5,4 +5,6 @@ class Url
   property :real_url,     String, :required => true
   property :created_at,   DateTime
   property :updated_at,   DateTime
+
+  validates_presence_of :real_url, :base_32_id
 end

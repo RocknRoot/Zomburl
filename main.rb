@@ -12,6 +12,7 @@ end
 
 post '/' do
   url = params[:url]
+  redirect to '/' if url.empty?
   url = "http://#{url}" if url !~ /http:\/\//
   length = Url.all.length
   if length < Zomburl::MAX_URL
