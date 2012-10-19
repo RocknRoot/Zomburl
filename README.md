@@ -37,6 +37,15 @@ If you change the database, you need to configure the corresponding settings in 
 
 If you have problems to run Zomburl (Database connect error, read only db, etc.), ensure that the db directory is owned by corresponding http user (www, www-data, nobody, etc.).
 
+## Configuration
+
+Look at config directory. You have to fill infos located in app.rb file.
+
+Needed informations are:
+* SERVER_URL - this will be the http accessed domain to get final url.
+* DB_NAME - Database name located in db directory.
+
+You can change MAX_URL too if you want store fewer informations.
 
 ## Need help ?
 
