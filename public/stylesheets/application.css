@@ -10,7 +10,15 @@ body {
 
 
 body {
+  margin: 0;
   font-family: 'Jolly Lodger', cursive;
   background-color: #0f0f0f;
   color: #87be2f;
+}
+
+.center {
+  margin-left: 35%;
+  margin-top: 12%;
+  width: 500px;
+  text-align:center;
 }
