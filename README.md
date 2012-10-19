@@ -35,6 +35,9 @@ If you have a problem during mysql2 gem installation (On Debian/Ubuntu):
 
 If you change the database, you need to configure the corresponding settings in config/db.rb file. (sqlite3 by default)
 
+If you have problems to run Zomburl (Database connect error, read only db, etc.), ensure that the db directory is owned by corresponding http user (www, www-data, nobody, etc.).
+
+
 ## Need help ?
 
 Add an issue on github ! ;)
