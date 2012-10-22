@@ -2,6 +2,8 @@
 
 Fast URL Shortening service
 
+* Public install : http://zomburl.rocknroot.org
+* Homepage : http://wiki.rocknroot.org/Zomburl
 * Version : 1.0
 
 Code is free, so if you're paranoid, you can install it at home or in that little private internet
