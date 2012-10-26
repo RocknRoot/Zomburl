@@ -5,11 +5,13 @@ html
     title Zomburl
     link href='http://fonts.googleapis.com/css?family=Jolly+Lodger' rel='stylesheet' type='text/css'
     link rel="stylesheet" href="stylesheets/application.css"
+    link rel="stylesheet" href="stylesheets/normalize.css"
   body
-     div class="center"
-      img src="images/zombie.png"
-      h1 ZOMBURL
-      == yield
-     div class="footer"
-      a href="http://www.rocknroot.org" Rock'n'Root
-      |  -  Takin Care of Business since 1337
+    div class="container"
+      div class="center"
+        img src="images/zombie.png"
+        h1 ZOMBURL
+        == yield
+    div class="footer"
+      a href="http://www.rocknroot.org" Rock 'n' Root
+      |  -  Takin' care of business since 1337

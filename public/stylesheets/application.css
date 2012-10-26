@@ -1,7 +1,8 @@
 html {
-    font-family: sans-serif; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-    -ms-text-size-adjust: 100%; /* 2 */
+  font-family: sans-serif; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  height: 100%;
 }
 
 body {
@@ -9,22 +10,64 @@ body {
   font-family: 'Jolly Lodger', cursive;
   background-color: #0f0f0f;
   color: #87be2f;
+  height: 100%;
 }
 
 a {
   text-decoration: none;
-  color: #87be2f
+  color: #87be2f;
+}
+
+.container {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -40px;
 }
 
 .center {
-  margin-left: 36.5%;
-  margin-top: 11%;
-  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -250px;
+  width: 300px;
+  height: 500px;
   text-align:center;
 }
 
 .footer {
-  margin-top: 14%;
+  height: 40px;
   width: 100%;
   text-align: center;
+}
+
+input {
+  font-size: 17px;
+  color: #5e5351;
+  background-color: #bdb0ae;
+  border: 1px solid gray;
+  padding: 7px;
+  height: 20px;
+}
+
+input:hover {
+  background-color: #ada09e;
+}
+
+input[type="text"] {
+  width: 200px;
+}
+
+input[type="text"]:focus {
+  background-color: #9d908e;
+}
+
+input[type="submit"] {
+  height: 36px;
+  border-left: 0;
+}
+
+input[type="submit"]:active {
+  background-color: #9d908e;
 }
