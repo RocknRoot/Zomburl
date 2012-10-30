@@ -27,7 +27,6 @@ We asume that you already have a web server capable of running Rack applications
     $ cd zomburl
     $ gem install bundle
     $ bundle install
-    $ ruby main.rb
 
 ### Troubleshooting
 
@@ -48,6 +47,22 @@ Needed informations are:
 * DB_NAME - Database name located in db directory.
 
 You can change MAX_URL too if you want store fewer informations.
+
+## Running Zomburl
+
+If you're in development mode, you can test zomburl with embedded web server with:
+
+    $ ruby main.rb # assuming you're in Zomburl app directory
+
+Or with passenger (on nginx):
+
+    server {
+        listen   80;
+        server_name  fucking-great.url.com;
+        root  /var/www/zomburl_app_directory/public;
+        passenger_enabled on;
+        passenger_base_uri /;
+    }
 
 ## Need help ?
 
