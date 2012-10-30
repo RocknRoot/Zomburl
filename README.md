@@ -54,7 +54,7 @@ If you're in development mode, you can test zomburl with embedded web server wit
 
     $ ruby main.rb # assuming you're in Zomburl app directory
 
-Or with passenger (on nginx):
+Or with passenger (on nginx), for your vhost configuration:
 
     server {
         listen   80;
