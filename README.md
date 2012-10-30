@@ -43,8 +43,14 @@ If you have problems to run Zomburl (Database connect error, read only db, etc.)
 Look at config directory. You have to fill infos located in app.rb file.
 
 Needed informations are:
+
 * SERVER_URL - this will be the http accessed domain to get final url.
 * DB_NAME - Database name located in db directory.
+
+In Zomburl app directory:
+
+    $ mv config/app.rb.example config/app.rb
+    $ vi config/app.rb # Edit your configuration file with needed informations
 
 You can change MAX_URL too if you want store fewer informations.
 
