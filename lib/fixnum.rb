@@ -14,4 +14,5 @@ class Fixnum
     end
     return number.reverse
   end
-end
+
+end ## Fixnum
