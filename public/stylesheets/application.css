@@ -42,6 +42,11 @@ a {
   text-align: center;
 }
 
+.content {
+  position: relative;
+  left: 16%;
+}
+
 input {
   font-size: 17px;
   color: #5e5351;
