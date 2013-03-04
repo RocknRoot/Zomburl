@@ -13,11 +13,11 @@ class Url
     length = Url.all.length
     if length < Zomburl::MAX_URL
       base_32 = length.to_32
-      Url.create(real_url: url, base_32_id: base_32)
+      Url.create(:real_url => url, :base_32_id => base_32)
     else
-      url_to_replace = Url.all(order: [ :updated_at.asc ]).first
+      url_to_replace = Url.all(:order => [ :updated_at.asc ]).first
       base_32 = url_to_replace.base_32_id
-      url_to_replace.update(real_url: url)
+      url_to_replace.update(:real_url => url)
     end
     "#{Zomburl::SERVER_URL}/#{base_32}"
   end
