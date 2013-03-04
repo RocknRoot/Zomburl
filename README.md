@@ -26,7 +26,7 @@ We asume that you already have a web server capable of running Rack applications
 
     $ git clone git://github.com/RocknRoot/Zomburl.git zomburl
     $ cd zomburl
-    $ gem install bundle
+    $ gem install bundler
     $ bundle install
 
 ### Troubleshooting
