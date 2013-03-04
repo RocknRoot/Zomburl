@@ -11,10 +11,11 @@ of yours. Or just participate to the development. Fork us !
 
 ## Requirements
 
-You need some dependencies like ruby (not 1.8.7 !), rubygems on your system.
+You need some dependencies like ruby, rubygems on your system.
 
 Tested with Ruby :
 
+* 1.8.7
 * 1.9.2
 * 1.9.3
 
