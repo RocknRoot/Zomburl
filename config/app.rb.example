@@ -1,6 +1,11 @@
 module Zomburl
-  VERSION = "1.0"
+  # If you want hashed urls -> pass it to true.
+  HASH_URL = false
+  VERSION = "1.1"
+  # Set your vhost url to format short url correctly.
   SERVER_URL = "http://your-server-url"
+  # MAX_URL size to rotate urls and avoid int overflow effect.
   MAX_URL = 1000000
+  # Trivial.
   DB_NAME = "name_of_your_database.db"
 end

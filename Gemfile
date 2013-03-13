@@ -3,5 +3,11 @@ source "http://rubygems.org"
 gem 'sinatra'
 gem 'slim'
 gem 'data_mapper'
-gem 'dm-sqlite-adapter'
+gem 'mhash'
+
 gem 'sqlite3'
+gem 'dm-sqlite-adapter'
+gem 'mysql2'
+gem 'dm-mysql-adapter'
+gem 'pg'
+gem 'dm-postgres-adapter'
