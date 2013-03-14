@@ -12,7 +12,7 @@ class Url
   validates_presence_of :real_url, :base_32_id
 
   def self.hash_url(url)
-    url = "http://#{url}" if url !~ /http:\/\//
+    url = "http://#{url}" if url !~ /^http/
     length = Url.all.length
     if length < Zomburl::MAX_URL
       base_32 = length.to_32
