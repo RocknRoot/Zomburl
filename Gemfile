@@ -7,7 +7,9 @@ gem 'mhash'
 
 gem 'sqlite3'
 gem 'dm-sqlite-adapter'
-gem 'mysql2'
-gem 'dm-mysql-adapter'
-gem 'pg'
-gem 'dm-postgres-adapter'
+
+# Don't install useless adapters by default
+#gem 'mysql2'
+#gem 'dm-mysql-adapter'
+#gem 'pg'
+#gem 'dm-postgres-adapter'

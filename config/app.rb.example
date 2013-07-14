@@ -1,6 +1,6 @@
 module Zomburl
   # If you want hashed urls -> pass it to true.
-  HASH_URL = false
+  HASH = false
   VERSION = "1.1"
   # Set your vhost url to format short url correctly.
   SERVER_URL = "http://your-server-url"
