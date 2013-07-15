@@ -41,7 +41,40 @@ If you have problems to run Zomburl (Database connect error, read only db, etc.)
 
 ## Configuration
 
-Look at config directory. You have to fill infos located in app.rb file.
+### Database adapter
+
+Zomburl use sqlite3 by default.
+
+To use postgresql or mysql, uncomment theses lines (according to your choice) in your Gemfile:
+
+```ruby
+# Mysql
+gem 'mysql2'
+gem 'dm-mysql-adapter'
+# Postgresql
+gem 'pg'
+gem 'dm-postgres-adapter'
+```
+
+If you change your db adapter, go to config/db.rb file and change informations according to your choice:
+
+```ruby
+# MySQL connection:
+DataMapper.setup(:default, 'mysql://user:password@hostname/database')
+```
+
+or
+
+```ruby
+# Postgres connection:
+DataMapper.setup(:default, 'postgres://user:password@hostname/database')
+```
+
+Don't forget to comment old sqlite3 line.
+
+### Common configuration
+
+Moreover, look at config directory. You have to fill infos located in app.rb file.
 
 Needed informations are:
 
@@ -62,7 +95,7 @@ If you're in development mode, you can test zomburl with embedded web server wit
 
     $ ruby main.rb # assuming you're in Zomburl app directory
 
-Or with passenger (on nginx), for your vhost configuration:
+Or with passenger (on nginx), for your (simple) vhost configuration:
 
     server {
         listen   80;
@@ -71,6 +104,8 @@ Or with passenger (on nginx), for your vhost configuration:
         passenger_enabled on;
         passenger_base_uri /;
     }
+
+NOTE: This example ISN'T secure (no SSL).
 
 ## Need help ?
 
