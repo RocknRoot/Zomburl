@@ -2,7 +2,7 @@
 
 Fast URL Shortening service
 
-* Public install : http://zomburl.rocknroot.org
+* Public install : http://cadav.re
 * Homepage : http://wiki.rocknroot.org/Zomburl
 * Version : 1.0
 
@@ -45,6 +45,7 @@ Look at config directory. You have to fill infos located in app.rb file.
 
 Needed informations are:
 
+* HASH - allow you to hash your shortened url (default: false)
 * SERVER_URL - this will be the http accessed domain to get final url.
 * DB_NAME - Database name located in db directory.
 
