@@ -13,7 +13,7 @@ class Url
 
   def self.hash_url(url)
     url = "http://#{url}" if url !~ /^http/
-    object = first(:real_url => url)
+    object = Url.first(:real_url => url)
     if object
       base_32 = object.base_32_id
     else
