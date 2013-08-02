@@ -8,4 +8,9 @@ module Zomburl
   MAX_URL = 1000000
   # Trivial.
   DB_NAME = "name_of_your_database.db"
+  # These options below are not mandatory.
+  # You can register your site here: http://www.google.com/recaptcha
+  # CAPTCHA_PUBLIC_KEY = 'your_pub_key_here'
+  # Keep it secret !
+  # CAPTCHA_PRIVATE_KEY = 'your_priv_key_here'
 end

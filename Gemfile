@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
 gem 'sinatra'
+gem 'rack-recaptcha', :require => 'rack/recaptcha'
 gem 'slim'
 gem 'data_mapper'
 gem 'mhash'

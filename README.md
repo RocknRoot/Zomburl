@@ -82,6 +82,17 @@ Needed informations are:
 * SERVER_URL - this will be the http accessed domain to get final url.
 * DB_NAME - Database name located in db directory.
 
+### Optionnal configuration settings
+
+You can setup recaptcha plugin for your Zomburl app (you need to get a account on recaptcha.net)
+
+In app.rb, you can add:
+
+* CAPTCHA_PUBLIC_KEY = 'your_pub_key_here'
+* CAPTCHA_PRIVATE_KEY = 'your_priv_key_here'
+
+### Change your configuration
+
 In Zomburl app directory:
 
     $ mv config/app.rb.example config/app.rb

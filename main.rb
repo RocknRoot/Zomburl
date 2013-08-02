@@ -1,5 +1,6 @@
 require 'bundler/setup'
 require 'sinatra'
+require 'rack/recaptcha'
 require 'slim'
 require 'data_mapper'
 require 'dm-migrations'
@@ -7,14 +8,21 @@ require 'json'
 # Local conf or lib
 require './config/loader'
 
+if Zomburl::has_captcha?
+  use Rack::Recaptcha, :public_key  => Zomburl::CAPTCHA_PUBLIC_KEY,
+                       :private_key => Zomburl::CAPTCHA_PRIVATE_KEY
+  helpers Rack::Recaptcha::Helpers
+end
+
 get '/' do
   slim :index
 end
 
 post '/' do
   url = params[:url]
-  redirect to '/' if url.empty? || url.nil?
-  @url = Url.hash_url(url)
+  redirect to '/' if url.empty? || url.nil? ||
+                  (Zomburl::has_captcha? && !recaptcha_valid?)
+@url = Url.hash_url(url)
   @clippy = <<-EOF
     <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
             width="110"

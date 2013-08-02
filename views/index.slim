@@ -1,3 +1,5 @@
 form action="/" method="POST"
+  - if Zomburl::has_captcha?
+    == recaptcha_tag :challenge, :display => { :theme => 'blackglass'}
   input type="text" name="url"
   input.button type="submit" value="Zomburl !"
